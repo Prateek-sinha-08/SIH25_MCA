@@ -1,0 +1,39 @@
+{
+  "name": "sih25-mca",
+  "version": "1.0.0",
+  "description": "Smart India Hackathon 2025 - MCA Category Solution",
+  "main": "index.js",
+  "scripts": {
+    "install:all": "npm run install:backend && npm run install:frontend",
+    "install:backend": "cd backend && npm install",
+    "install:frontend": "cd frontend && npm install",
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:backend": "cd backend && npm run dev",
+    "dev:frontend": "cd frontend && npm start",
+    "build": "npm run build:frontend && npm run build:backend",
+    "build:frontend": "cd frontend && npm run build",
+    "build:backend": "cd backend && npm run build",
+    "test": "npm run test:backend && npm run test:frontend",
+    "test:backend": "cd backend && npm test",
+    "test:frontend": "cd frontend && npm test",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "lint:fix": "eslint . --ext .js,.jsx,.ts,.tsx --fix"
+  },
+  "keywords": [
+    "smart-india-hackathon",
+    "sih2025",
+    "mca",
+    "hackathon",
+    "full-stack"
+  ],
+  "author": "SIH25 MCA Team",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^7.6.0",
+    "eslint": "^8.0.0"
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  }
+}
